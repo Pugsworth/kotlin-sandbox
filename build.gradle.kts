@@ -33,7 +33,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass.set("org.pugsworth.sandbox")
+    mainClass.set("org.pugsworth.sandbox.MainKt")
 }
 
 // tasks.withType<Jar> {
