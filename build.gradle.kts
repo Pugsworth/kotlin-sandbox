@@ -35,3 +35,9 @@ application {
     // Define the main class for the application.
     mainClass.set("quick.start.AppKt")
 }
+
+tasks.withType<Jar> {
+    manifest {
+        attributes["Main-Class"] = "com.pugsworth.sandbox.main"
+    }
+}
