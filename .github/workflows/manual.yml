@@ -1,0 +1,16 @@
+# This is a basic workflow that is manually triggered
+
+name: Manual workflow
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+    push:
+    workflow_dispatch:
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v2
+        - uses: fwilhe2/setup-kotlin@main
+        - run: kotlinc src/main.kt -include-runtime -d /tmp/main.jar; java -jar /tmp/main.jar
